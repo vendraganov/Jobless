@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/margin"
+    android:orientation="horizontal"
+    android:weightSum="1">
+
+        <TextView
+            android:id="@+id/incomePeriodTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|start"
+            android:layout_weight="0.6"
+            android:padding="@dimen/padding"
+            android:text="@string/income_period"
+            android:textAlignment="textStart"
+            android:textSize="@dimen/default_text_size" />
+
+        <EditText
+            android:id="@+id/enterIncomeEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|start"
+            android:layout_weight="0.4"
+            android:background="@drawable/user_input_text_view"
+            android:digits="1234567890."
+            android:hint="@string/amount_type_hint"
+            android:imeOptions="actionNext"
+            android:inputType="numberDecimal"
+            android:padding="@dimen/padding"
+            android:textAlignment="textStart"
+            android:textSize="@dimen/default_text_size" />
+
+</LinearLayout>

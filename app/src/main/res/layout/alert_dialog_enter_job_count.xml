@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/margin_extra_large">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding"
+        android:layout_gravity="center_horizontal"
+        android:textSize="@dimen/default_button_text_size"
+        android:textAlignment="center"
+        android:text="@string/enter_job_over_10" />
+
+    <EditText
+        android:id="@+id/jobCountOver10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/user_input_text_view"
+        android:digits="1234567890"
+        android:ems="3"
+        android:imeOptions="actionDone"
+        android:inputType="number"
+        android:maxLength="2"
+        android:padding="@dimen/padding"
+        android:textAlignment="center"
+        android:textSize="@dimen/default_text_size" />
+</LinearLayout>

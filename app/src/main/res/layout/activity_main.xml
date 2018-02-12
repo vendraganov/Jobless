@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+ <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/newButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="72dp"
+        android:lineSpacingExtra="10sp"
+        android:text="@string/welcome_text"
+        android:textAlignment="center"
+        android:textColor="@color/menuColor"
+        android:textSize="@dimen/welcome_text_size" />
+
+
+    <Button
+         android:id="@+id/previousButton"
+         style="@style/Widget.AppCompat.Button.Colored"
+         android:layout_width="@dimen/button_size"
+         android:layout_height="wrap_content"
+         android:layout_alignParentBottom="true"
+         android:layout_centerHorizontal="true"
+         android:layout_marginBottom="157dp"
+         android:text="@string/previous_estimate"
+         android:textAllCaps="false"
+         android:textColor="@color/menuColorDefault"
+         android:textSize="@dimen/default_button_text_size" />
+
+    <Button
+        android:id="@+id/newButton"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="@dimen/button_size"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/previousButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="17dp"
+        android:text="@string/new_estimate"
+        android:textAllCaps="false"
+        android:textColor="@color/menuColorDefault"
+        android:textSize="@dimen/default_button_text_size" />
+
+
+    <Button
+        android:id="@+id/draftButton"
+        android:layout_width="@dimen/button_size"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/newButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="66dp"
+        android:text="@string/draft"
+        android:textSize="@dimen/default_button_text_size"
+        android:textAllCaps="false"
+        android:textColor="@color/menuColorDefault"
+        style="@style/Widget.AppCompat.Button.Colored"/>
+</RelativeLayout>
+

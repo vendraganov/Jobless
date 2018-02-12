@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ventsislavdraganov.jobless.JobDetails">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbarJobDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_height="wrap_content">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/padding"
+            android:layout_marginTop="@dimen/top_and_bottom_margin"
+            android:layout_marginLeft="@dimen/margin_extra_large"
+            android:layout_marginRight="@dimen/margin_extra_large"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:columnCount="1">
+
+            <TextView
+                android:id="@+id/jobInfoTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/margin"
+                android:layout_marginTop="@dimen/margin"
+                android:lines="2"
+                android:padding="@dimen/padding"
+                android:text="@string/income_label"
+                android:textAlignment="center"
+                android:textSize="@dimen/default_text_size" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_large"
+                android:layout_marginTop="@dimen/margin_large"
+                android:background="@drawable/line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/positionTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|start"
+                    android:layout_marginBottom="@dimen/margin"
+                    android:layout_marginTop="@dimen/margin"
+                    android:layout_weight="0.25"
+                    android:padding="@dimen/padding"
+                    android:text="@string/position"
+                    android:textAlignment="viewStart"
+                    android:textSize="@dimen/default_text_size" />
+
+                <EditText
+                    android:id="@+id/positionEditText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|start"
+                    android:layout_marginBottom="@dimen/margin"
+                    android:layout_marginTop="@dimen/margin"
+                    android:layout_weight="0.75"
+                    android:background="@drawable/user_input_text_view"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapWords|date"
+                    android:maxLength="10"
+                    android:padding="@dimen/padding"
+                    android:textAlignment="textStart"
+                    android:textSize="@dimen/default_text_size" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_large"
+                android:background="@drawable/line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/startDateTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|start"
+                    android:layout_marginBottom="@dimen/margin"
+                    android:layout_marginTop="@dimen/margin"
+                    android:layout_weight="0.6"
+                    android:padding="@dimen/padding"
+                    android:text="@string/start_date"
+                    android:textAlignment="viewStart"
+                    android:textSize="@dimen/default_text_size" />
+
+                <EditText
+                    android:id="@+id/startDateInputEditText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|start"
+                    android:layout_marginBottom="@dimen/margin"
+                    android:layout_marginTop="@dimen/margin"
+                    android:layout_weight="0.4"
+                    android:background="@drawable/user_input_text_view"
+                    android:digits="0123456789/"
+                    android:hint="@string/date_type_hint"
+                    android:imeOptions="actionNext"
+                    android:inputType="date"
+                    android:maxLength="10"
+                    android:padding="@dimen/padding"
+                    android:textAlignment="textStart"
+                    android:textSize="@dimen/default_text_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/lastDateTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|start"
+                    android:layout_marginBottom="@dimen/margin"
+                    android:layout_marginTop="@dimen/margin"
+                    android:layout_weight="0.6"
+                    android:padding="@dimen/padding"
+                    android:text="@string/last_date"
+                    android:textAlignment="viewStart"
+                    android:textSize="@dimen/default_text_size" />
+
+                <EditText
+                    android:id="@+id/lastDateInputEditText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|start"
+                    android:layout_marginBottom="@dimen/margin"
+                    android:layout_marginTop="@dimen/margin"
+                    android:layout_weight="0.4"
+                    android:background="@drawable/user_input_text_view"
+                    android:digits="1234567890/"
+                    android:hint="@string/date_type_hint"
+                    android:imeOptions="actionDone"
+                    android:inputType="date"
+                    android:maxLength="10"
+                    android:padding="@dimen/padding"
+                    android:textAlignment="textStart"
+                    android:textSize="@dimen/default_text_size" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/line" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/margin_large"
+                android:text="@string/payment_type"
+                android:textAlignment="center"
+                android:textSize="@dimen/default_text_size" />
+
+            <LinearLayout
+                android:id="@+id/paymentTypeLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/weeklyButton"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:lines="2"
+                    android:padding="@dimen/padding"
+                    android:text="@string/weekly_payment_type"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@drawable/button_color_state"
+                    android:textSize="@dimen/default_button_text_size" />
+
+                <Button
+                    android:id="@+id/biweeklyButton"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:lines="2"
+                    android:padding="@dimen/padding"
+                    android:text="@string/biweekly_payment_type"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@drawable/button_color_state"
+                    android:textSize="@dimen/default_button_text_size" />
+
+                <Button
+                    android:id="@+id/monthlyButton"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:lines="2"
+                    android:padding="@dimen/padding"
+                    android:text="@string/monthly_payment_type"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@drawable/button_color_state"
+                    android:textSize="@dimen/default_button_text_size" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/margin"
+                android:text="@string/employment_status"
+                android:textAlignment="center"
+                android:textSize="@dimen/default_text_size" />
+
+            <GridLayout
+                android:id="@+id/employmentStatusGridLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="3"
+                android:rowCount="2">
+
+                <Button
+                    android:id="@+id/employedButton"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:layout_columnWeight="1"
+                    android:lines="2"
+                    android:padding="@dimen/padding"
+                    android:text="@string/employed"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@drawable/button_color_state"
+                    android:textSize="@dimen/default_button_text_size" />
+
+                <Button
+                    android:id="@+id/unemployedButton"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_columnWeight="1"
+                    android:lines="2"
+                    android:padding="@dimen/padding"
+                    android:text="@string/unemployed"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@drawable/button_color_state"
+                    android:textSize="@dimen/default_button_text_size" />
+
+                <Button
+                    android:id="@+id/partTimeButton"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:layout_columnWeight="1"
+                    android:lines="2"
+                    android:padding="@dimen/padding"
+                    android:text="@string/part_time"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@drawable/button_color_state"
+                    android:textSize="@dimen/default_button_text_size" />
+
+                <Button
+                    android:id="@+id/laidOffButton"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:layout_columnWeight="1"
+                    android:layout_row="1"
+                    android:lines="2"
+                    android:padding="@dimen/padding"
+                    android:text="@string/laid_off"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@drawable/button_color_state"
+                    android:textSize="@dimen/default_button_text_size" />
+
+                <Button
+                    android:id="@+id/quitButton"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_columnWeight="1"
+                    android:layout_row="1"
+                    android:lines="2"
+                    android:padding="@dimen/padding"
+                    android:text="@string/quit"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@drawable/button_color_state"
+                    android:textSize="@dimen/default_button_text_size" />
+
+                <Button
+                    android:id="@+id/firedButton"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:layout_columnWeight="1"
+                    android:layout_row="1"
+                    android:lines="2"
+                    android:padding="@dimen/padding"
+                    android:text="@string/fired"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@drawable/button_color_state"
+                    android:textSize="@dimen/default_button_text_size" />
+
+            </GridLayout>
+
+
+        </GridLayout>
+    </ScrollView>
+
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#f471f6</color>
+    <color name="menuColor">#448aff</color>
+    <color name="menuColorDefault">#ffffff</color>
+    <color name="buttonState">#9e807f7f</color>
+    <color name="inputBackground">#e9e8e8</color>
+</resources>
