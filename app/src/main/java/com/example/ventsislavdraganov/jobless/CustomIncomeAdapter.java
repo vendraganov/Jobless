@@ -10,12 +10,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.Map;
-import java.util.Set;
 
 /**
  * Created by ventsislavdraganov on 12/17/17.
@@ -24,8 +21,8 @@ import java.util.Set;
 public class CustomIncomeAdapter extends ArrayAdapter<IncomeView> {
     //view holder to hold the views of the layout
     private static class ViewHolder {
-        TextView period;
-        EditText income;
+        TextView periodToDisplay;
+        EditText incomeToDisplay;
         int positionItem;
 
 
@@ -46,8 +43,8 @@ public class CustomIncomeAdapter extends ArrayAdapter<IncomeView> {
             //we are getting references to the views
             viewHolder = new CustomIncomeAdapter.ViewHolder();
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.custom_income_list_view, parent, false);
-            viewHolder.period = (TextView) convertView.findViewById(R.id.incomePeriodTextView);
-            viewHolder.income = (EditText)convertView.findViewById(R.id.enterIncomeEditText);
+            viewHolder.periodToDisplay = (TextView) convertView.findViewById(R.id.incomePeriodTextView);
+            viewHolder.incomeToDisplay = (EditText)convertView.findViewById(R.id.enterIncomeEditText);
             convertView.setTag(viewHolder);
         } else {
             //if the contentVies exist we are getting the object which was created
@@ -55,11 +52,11 @@ public class CustomIncomeAdapter extends ArrayAdapter<IncomeView> {
         }
         viewHolder.positionItem = position;
         //setting the name
-        viewHolder.period.setText(getItem(position).period);
+        viewHolder.periodToDisplay.setText(getItem(position).period);
         if(getItem(position).income!=null && !getItem(position).income.isEmpty()  ) {
-            viewHolder.income.setText(getItem(position).income);
+            viewHolder.incomeToDisplay.setText(getItem(position).income);
         }
-        viewHolder.income.addTextChangedListener(new TextWatcher() {
+        viewHolder.incomeToDisplay.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 

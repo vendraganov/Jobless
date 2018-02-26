@@ -130,7 +130,7 @@ public class Income extends AppCompatActivity {
     }
 
     //listener for the submit button, this button will be available only if the user enter
-    //all the income periods
+    //all the incomeToDisplay periods
     private final View.OnClickListener doneWithThisNameButtonClicked = new View.OnClickListener() {
         @Override
         public void onClick(View view) {

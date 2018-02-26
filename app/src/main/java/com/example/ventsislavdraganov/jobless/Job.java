@@ -115,7 +115,7 @@ public class Job {
     public String[] getIncomePeriod(){return incomePeriod;}
 
 
-    //creating and returning an array with the date income periods
+    //creating and returning an array with the date incomeToDisplay periods
     public void createIncomePeriodsArrays(Context context , String baseYear) {
 
         int populatePeriods = 0;//count the populate periods

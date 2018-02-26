@@ -67,10 +67,10 @@ public class JoblessDatabaseQueries {
         return userCount;
     }
 
-    public int updateUserInformation(int estimateStatus){
+    public int updateUserInformation(int userId){
         database = dbHelper.getWritableDatabase();
         ContentValues values = new ContentValues();
-        values.put(JoblessDatabaseDescription.KEY_ID, estimateStatus);
+        values.put(JoblessDatabaseDescription.KEY_ID, userId);
         values.put(JoblessDatabaseDescription.FIRST_NAME, "Ven");
         values.put(JoblessDatabaseDescription.LAST_NAME, "Draganov");
         values.put(JoblessDatabaseDescription.GENDER, "male");
@@ -83,7 +83,7 @@ public class JoblessDatabaseQueries {
         values.put(JoblessDatabaseDescription.NOT_ELIGIBLE_FOR_BENEFIT, 1);
         values.put(JoblessDatabaseDescription.ESTIMATE_COMPLETE, 1);
         String whereClause = JoblessDatabaseDescription.KEY_ID +"=?";
-        String whereArgs[] = {String.valueOf(estimateStatus)};
+        String whereArgs[] = {String.valueOf(userId)};
         int update = database.update(JoblessDatabaseDescription.USER_TABLE, values, whereClause, whereArgs);
         database.close();
 

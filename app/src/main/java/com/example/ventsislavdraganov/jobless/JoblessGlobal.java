@@ -23,7 +23,6 @@ import java.util.Map;
 
 public class JoblessGlobal extends Application{
 
-
     private String firstName;//database
     private String lastName;//database
     private String gender;//database
